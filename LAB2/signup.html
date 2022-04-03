@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>회원가입</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" type="text/css" href="main.css">
+    </head>
+    <body>
+        <nav class="menu">
+            <ul>
+                <li><a href="login.html">로그인</a></li>
+                <li><a href="signup.html">회원가입</a></li>
+            </ul>
+        </nav>
+        <div class="title">
+            계정을 생성하세요.
+        </div>
+        <main>
+            <div class="container">
+                <div id="name">
+                    <input type="text" placeholder="성" required autofocus>
+                    <input type="text" placeholder="이름" required>
+                </div>
+                <div class="box" id="birth">
+                    <h4>생년월일</h4>
+                    <input type="date" required>
+                </div>
+                <!-- <div id="name">
+                    <div class="box" id="lastname">
+                        <input type="text" placeholder="성" required autofocus>
+                    </div>
+                    <div class="box" id="firstname">
+                        <input type="text" placeholder="이름" required>
+                    </div>
+                </div>
+                <div class="box" id="birth">
+                    <h4>생년월일</h4>
+                    <input type="date" required>
+                </div> -->
+            </div>
+            <div class="container">
+                <input type="email" placeholder="name@example.com">
+                <input type="password" placeholder="암호" required>
+                <input type="password" placeholder="암호 확인" required>
+                <!-- <div class="box" id="email">
+                    <input type="email" placeholder="name@example.com">
+                </div>
+                <div class="box" id="pw">
+                    <input type="password" placeholder="암호" required>
+                </div>
+                <div class="box" id="pwck">
+                    <input type="password" placeholder="암호 확인" required>
+                </div> -->
+            </div>
+            <div class="container">
+                <div class="box" id="sex">
+                    <select>
+                        <option selected>성별</option>
+                        <option>남자</option>
+                        <option>여자</option>
+                        <option>선택 안함</option>
+                    </select>
+                </div>
+                <div class="box" id="tel">
+                    <input type="tel" placeholder="전화번호" pattern="010-\d{4}-\d{4}">
+                </div>
+                <div class="box" id="grade">
+                    <h4>학년</h4>
+                    <input type="number" min="1" max="6" step="1" value="1">
+                </div>
+            </div>
+            <div class="box" id="submit">
+                <button>Signup</button>
+            </div>
+        </main>
+    </body>
+</html>
