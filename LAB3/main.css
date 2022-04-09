@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;900&display=swap');
+
+* {
+    text-align: center;
+    font-family: 'Nanum Gothic', sans-serif;
+}
+.menu {
+    position: relative;
+}
+.menu ul {
+    background-color: rgb(50, 50, 50);
+    height: 50px;
+    width: auto;
+    margin: 0;
+    padding: 0;
+}
+.menu li {
+    display: inline-block;
+}
+.menu a {
+    color: white;
+    font-size: 12pt;
+    text-align: center;
+    text-decoration: none;
+    line-height: 50px;
+    padding: 15px 15px;
+}
+.menu a:hover {
+    color: yellow;
+}
+.title {
+    font-size: 50px;
+    font-family: 'Noto Sans KR';
+    font-weight: 900;
+    letter-spacing: 6px;
+    padding: 10vh 0vh 5vh 0vh;
+    background: linear-gradient(to right, #fcc6c5, #745c5c);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+.container {
+    border: 1px groove gray;
+    margin: 5vh 25vw;
+    padding: 5vh 5vw;
+    border-radius: 20px;
+    border-width: 3px;
+}
+.box {
+
+}
+input {
+    text-align: left;
+    padding: 20px;
+    border-radius: 10px;
+    border-width: 3px;
+    font-size: 1.5vh;
+}
+#name {
+    display: flex;
+    width: 50%;
+    margin: 10px auto;
+}
+#lastname {
+    flex: 1;
+}
+#firstname {
+    flex: 1;
+}
