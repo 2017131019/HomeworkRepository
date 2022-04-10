@@ -4,12 +4,17 @@
 * {
     text-align: center;
     font-family: 'Nanum Gothic', sans-serif;
+    margin: 0 auto;
 }
 .menu {
     position: relative;
 }
 .menu ul {
-    background-color: rgb(50, 50, 50);
+    background: linear-gradient(135deg,
+                                rgb(190, 140, 120) 0%,
+                                rgb(150, 90, 60) 50%,
+                                rgb(80, 40, 20) 51%,
+                                rgb(150, 80, 60) 100%);
     height: 50px;
     width: auto;
     margin: 0;
@@ -17,6 +22,12 @@
 }
 .menu li {
     display: inline-block;
+}
+.menu li.left {
+    float: left;
+}
+.menu li.right {
+    float: right;
 }
 .menu a {
     color: white;
@@ -29,42 +40,101 @@
 .menu a:hover {
     color: yellow;
 }
-.title {
-    font-size: 50px;
+header {
     font-family: 'Noto Sans KR';
-    font-weight: 900;
+    font-size: 50px;
+    font-weight: 500;
     letter-spacing: 6px;
-    padding: 10vh 0vh 5vh 0vh;
-    background: linear-gradient(to right, #fcc6c5, #745c5c);
+    text-shadow: 10px 10px 25px rgb(200, 120, 120);
+    background: linear-gradient(to right, rgb(250, 200, 200), rgb(120, 90, 90));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
+    padding: 20vh 0vh 5vh 0vh;
+    width: 1020px;
 }
-.container {
-    border: 1px groove gray;
-    margin: 5vh 25vw;
-    padding: 5vh 5vw;
-    border-radius: 20px;
-    border-width: 3px;
+header div {
+    font-family: 'Noto Sans KR';
+    animation-name: movingHeader;
+    animation-duration: 2s;
+    width: 450px;
 }
-.box {
-
+@keyframes movingHeader {
+    0%      { margin-left: 100%; }
+    100%    { margin-left: 0%; }
 }
-input {
+header.signup {
+    padding: 10vh 0vh 5vh 0vh;
+}
+section {
+    width: 1020px;
+    padding: 5vh 0vw;
+}
+.input-box {
+    position: relative;
+    width: 300px;
+}
+.input-box input {
+    background: transparent;
+    border: none;
+    border-bottom: 2px solid rgb(200, 130, 100);
+    padding: 30px 0px 5px 0px;
+    margin-bottom: 30px;
+    width: 100%;
+    font-size: 14pt;
     text-align: left;
-    padding: 20px;
-    border-radius: 10px;
-    border-width: 3px;
-    font-size: 1.5vh;
 }
-#name {
-    display: flex;
-    width: 50%;
-    margin: 10px auto;
+.input-box input::placeholder {
+    color: transparent;
 }
-#lastname {
-    flex: 1;
+.input-box input:placeholder-shown + label {
+    color: rgb(140, 10, 10);
+    font-size: 14pt;
+    top: 15px;
 }
-#firstname {
-    flex: 1;
+.input-box input:focus + label, label {
+    font-family: 'Noto Sans KR';
+    color: rgb(140, 160, 160);
+    font-size:10pt;
+    pointer-events: none;
+    position: absolute;
+    left:0px;
+    top:0px;
+    transition: all 0.2s ease;
+}
+.input-box input:focus, input:not(:placeholder-shown) {
+    border-bottom: 2px solid rgb(140, 160, 160);
+    outline: none;
+}
+div.carrot {
+    height: 200px;
+    width: 200px;
+    padding: 70px;
+    float: left;
+}
+div.carrot img {
+    height: 170px;
+    transition: transform 2s;
+}
+div.carrot img:hover {
+    transform: rotate(360deg);
+}
+div.lemon {
+    height: 200px;
+    width: 200px;
+    padding: 70px;
+    float: right;
+}
+div.lemon img {
+    height: 170px;
+    transition: transform 2s;
+}
+div.lemon img:hover {
+    transform: scale(2, 2);
+}
+@media screen and (min-width: 1021px) {
+    .menu ul {
+        width: 1020px;
+        margin: 0 auto;
+    }
 }

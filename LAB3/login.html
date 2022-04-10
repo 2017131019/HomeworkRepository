@@ -4,24 +4,28 @@
         <title>로그인</title>
         <meta charset="utf-8">
         <link rel="stylesheet" type="text/css" href="main.css">
+        <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js"></script>
     </head>
     <body>
-        <div class="title">
-            Welcome to INTERNET-PROGRAMMING SHOP
-        </div>
-        <div class="container">
-            <div>
-                <input type="text" placeholder="이메일" required autofocus>
+        <nav class="menu">
+            <ul>
+                <li class="left"><a href="index.html"><i class="fa-solid fa-house"></i></a></li>
+                <li class="right"><a href="signup.html">회원가입</a></li>
+                <li class="right"><a href="login.html">로그인</a></li>
+            </ul>
+        </nav>
+        <header>
+            스토어에 로그인하세요.
+        </header>
+        <section>
+            <div class="input-box">
+                <input id="id" type="text" placeholder=" " required autofocus>
+                <label for="id">이메일</label>
             </div>
-            <div>
-                <input type="text" placeholder="비밀번호" required autofocus>
+            <div class="input-box">
+                <input id="password" type="password" placeholder=" " required>
+                <label for="password">비밀번호</label>
             </div>
-            <div class="box" id="submit">
-                <button>로그인</button>
-            </div>
-            <div class="box">
-                <button>회원가입</button>
-            </div>
-        </div>
+        </section>
     </body>
 </html>
